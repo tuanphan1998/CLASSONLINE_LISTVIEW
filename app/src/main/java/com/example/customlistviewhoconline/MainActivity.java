@@ -142,7 +142,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        //in 3 data
+        create3DataDemo();
         // khoi tao data vao item
         adt = new ArrayAdapter<School>(MainActivity.this , 0 , listSchool)
         {
@@ -205,6 +206,25 @@ public class MainActivity extends AppCompatActivity {
         catch (Exception ex)
         {
             Toast.makeText(this, "" + ex, Toast.LENGTH_SHORT).show();
+        }
+    }
+    // them moi 3 data
+     private void create3DataDemo()
+    {
+        try {
+
+            for(int i = 0 ; i<=2 ; i++)
+            {
+                School s = new School();
+                s.setName("tuankim" + i);
+                s.setAddress("12312" + i);
+                listhocsinh.add(s);
+
+            }
+        }
+        catch (Exception ex2)
+        {
+            Toast.makeText(this, ""+ex2, Toast.LENGTH_SHORT).show();
         }
     }
 
